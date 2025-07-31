@@ -76,21 +76,23 @@ Ensure ports don't conflict:
 - `flight-service` runs on port `8081`
 - `booking-service` runs on port `8082`
 
-To run individually:
+**Run both the services in 2 terminals inside root folder:**
 
 ```bash
-cd flight-service
-./gradlew bootRun
+.\gradlew :flight-service:bootRun
 ```
 
 ```bash
-cd booking-service
-./gradlew bootRun
+.\gradlew :booking-service:bootRun
 ```
 
 ---
+ ## To test both the services
+ ```bash
+  .\gradlew test
 
-## Sample JSON Data (flight-service/resources/data/flights.json)
+
+## Data - JSON Data (flight-service/resources/data/flights.json)
 
 If adding or modifying, make sure the data matches your model structure (includes fares, stopovers, times etc).
 
