@@ -68,7 +68,7 @@ flight/                          # Root folder (multi-module Gradle project)
 - `booking-service` caches flight validation results.
 
 ---
-## Build the application
+## Build and Run the application
 Run in root folder
 
 ```bash
@@ -92,7 +92,7 @@ Ensure ports don't conflict:
 ```
 
 ---
- ## To test both the services
+ ## Test both the services
  ```bash
   .\gradlew test
 
