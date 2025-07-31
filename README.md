@@ -11,7 +11,7 @@ This project is a microservice-based Flight Booking System built with Spring Boo
 
 - Java 21
 - Spring Boot 3
-- Gradle
+- Gradle 8.4
 - RESTful API
 - In-memory data store (JSON file)
 - Caffeine Cache
