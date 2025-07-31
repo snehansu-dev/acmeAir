@@ -1,0 +1,90 @@
+[
+  {
+    "id": "F001",
+    "origin": "Auckland",
+    "destination": "Wellington",
+    "departureDate": "2025-08-01",
+    "departureTime": "09:00:00",
+    "arrivalDate": "2025-08-01",
+    "arrivalTime": "10:00:00",
+    "stopovers": [],
+    "fares": [
+      {
+        "travelClass": "economy",
+        "price": 120.00,
+        "currency": "NZD"
+      },
+      {
+        "travelClass": "business",
+        "price": 250.00,
+        "currency": "NZD"
+      }
+    ]
+  },
+  {
+    "id": "F002",
+    "origin": "Auckland",
+    "destination": "Christchurch",
+    "departureDate": "2025-08-02",
+    "departureTime": "10:30:00",
+    "arrivalDate": "2025-08-02",
+    "arrivalTime": "12:00:00",
+    "stopovers": [],
+    "fares": [
+      {
+        "travelClass": "economy",
+        "price": 180.00,
+        "currency": "NZD"
+      },
+      {
+        "travelClass": "business",
+        "price": 320.00,
+        "currency": "NZD"
+      }
+    ]
+  },
+  {
+    "id": "F009",
+    "origin": "Auckland",
+    "destination": "Christchurch",
+    "departureDate": "2025-08-02",
+    "departureTime": "10:30:00",
+    "arrivalDate": "2025-08-02",
+    "arrivalTime": "12:00:00",
+    "stopovers": ["Wellington"],
+    "fares": [
+      {
+        "travelClass": "economy",
+        "price": 160.00,
+        "currency": "NZD"
+      },
+      {
+        "travelClass": "business",
+        "price": 250.00,
+        "currency": "NZD"
+      }
+    ]
+  },
+  {
+    "id": "F003",
+    "origin": "Taupo",
+    "destination": "Dunedin",
+    "departureDate": "2025-08-02",
+    "departureTime": "10:30:00",
+    "arrivalDate": "2025-08-02",
+    "arrivalTime": "13:45:00",
+    "stopovers": ["Wellington"],
+    "fares": [
+      {
+        "travelClass": "economy",
+        "price": 160.00,
+        "currency": "NZD"
+      },
+      {
+        "travelClass": "business",
+        "price": 290.00,
+        "currency": "NZD"
+      }
+    ]
+  }
+]
