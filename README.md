@@ -115,3 +115,18 @@ If adding or modifying, make sure the data matches your model structure (include
 - Date is formatted as `yyyy-MM-dd`
 - Time uses default `LocalTime` 24-hour format (e.g., `23:05:01`)
 - Pricing supports multiple fare classes (economy, business) with currency code
+
+## Future Improvements
+- For now Caffeine is used as Cache, but once containterized Redis distruted cache will be used
+- Docker will implemented
+- Per service Database will be implemented
+- Notification service will be implemented to send booking confirmation
+- Payment Service will be integrated
+- Opentelemetry Observability will implemented for tracing
+- Elastic search will be implemented for distributed logging
+- CorrelationId will be used for tracing and will be added to logging
+- Some addon to booking service will be done
+- User Service will implemented to store customer data
+- Identity service will be implemented
+
+
