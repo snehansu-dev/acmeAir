@@ -1,0 +1,4 @@
+rootProject.name = 'flight'
+
+include 'booking-service'
+include 'flight-service'
