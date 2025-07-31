@@ -98,7 +98,7 @@ If adding or modifying, make sure the data matches your model structure (include
 
 ## Git Setup
 
-- Each service has its own `.gitignore`
+-  `.gitignore` is placed at root level
 - `.idea/` folders and build outputs are ignored
 
 ---
