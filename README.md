@@ -47,12 +47,13 @@ flight/                          # Root folder (multi-module Gradle project)
 
 ## Endpoints
 
-### Flight Service
+### Flight Service  (For test, used Port 8081)
 
-- `GET /api/flights/search?origin=Auckland&destination=Christchurch[&direct=true|false]` — Search flights by route and optionally filter for direct only.
+- `GET /api/flights/search?origin=Auckland&destination=Christchurch` — Search all the flights by route.
+- `GET /api/flights/search?origin=Auckland&destination=Christchurch&direct=false` — Search flights by route and optionally filter for direct only.
 - `GET /api/flights/{id}` — Get flight details by ID
 
-### Booking Service
+### Booking Service  (For test, used Port 8082)
 
 - `POST /api/bookings` — Create a new booking
 - `GET /api/bookings/{id}` — Get a booking by ID
@@ -68,7 +69,7 @@ flight/                          # Root folder (multi-module Gradle project)
 - `booking-service` caches flight validation results.
 
 ---
-## Build the application
+## Build and Run the application
 Run in root folder
 
 ```bash
@@ -91,12 +92,6 @@ Ensure ports don't conflict:
 .\gradlew :booking-service:bootRun
 ```
 
----
- ## To test both the services
- ```bash
-  .\gradlew test
-
-
 ## Data - JSON Data (flight-service/resources/data/flights.json)
 
 If adding or modifying, make sure the data matches your model structure (includes fares, stopovers, times etc).
@@ -115,3 +110,18 @@ If adding or modifying, make sure the data matches your model structure (include
 - Date is formatted as `yyyy-MM-dd`
 - Time uses default `LocalTime` 24-hour format (e.g., `23:05:01`)
 - Pricing supports multiple fare classes (economy, business) with currency code
+
+## Future Improvements
+- For now Caffeine is used as Cache, but once containterized Redis distruted cache will be used
+- Docker will implemented
+- Per service Database will be implemented
+- Notification service will be implemented to send booking confirmation
+- Payment Service will be integrated, till then booking status would remain "PENDING_PAYMENT"
+- Saga pattern will be implemented for compensation transaction
+- Opentelemetry Observability will implemented for tracing
+- Elastic search will be implemented for distributed logging
+- CorrelationId will be used for tracing and would be added to logging
+- Some addon to booking service will be done
+- Identity service will be implemented
+
+
