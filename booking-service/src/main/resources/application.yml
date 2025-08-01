@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: booking-service
+
+  cache:
+    type: caffeine
+    cache-names:
+      - flight-validation
+      - bookingById
+    caffeine:
+      spec: maximumSize=1000,expireAfterWrite=5m
+
+server:
+  port: 8082
+
+flight:
+  service:
+    url: http://localhost:8081
+
+resilience4j:
+  retry:
+    instances:
+      flightServiceRetry:
+        max-attempts: 3
+        wait-duration: 500ms
+
+  circuitbreaker:
+    instances:
+      flightServiceCircuitBreaker:
+        sliding-window-size: 5
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 5s

@@ -16,8 +16,10 @@ public class BookingServiceApplication {
 	}
 
 	@Bean
-	public WebClient flightWebClient(@Value("${flight.service.url}") String baseUrl) {
-		return WebClient.builder()
+	public WebClient flightWebClient(
+			@Value("${flight.service.url}") String baseUrl,
+			WebClient.Builder builder) {
+		return builder
 				.baseUrl(baseUrl)
 				.build();
 	}
